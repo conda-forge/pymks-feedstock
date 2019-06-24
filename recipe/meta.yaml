@@ -23,14 +23,17 @@ requirements:
   run:
     - python
     - numpy
-    - scipy
-    - scikit-learn
+    - scipy == 0.19.1
+    - scikit-learn ==0.18.2
     - pytest
     - pytest-cov
     - nbval
-    - sfepy
+    - sfepy == 2018.2
     - configparser  # [py27]
-
+    - matplotlib == 2.0.2
+    - dask
+    - dask-ml
+    - toolz
 
 about:
   home: https://github.com/materialsinnovation/pymks/
