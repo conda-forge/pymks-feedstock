@@ -15,8 +15,7 @@ build:
   number: 1
   script:
     - python setup.py install --single-version-externally-managed --record record.txt
-    - cp conda_build_config.yaml $PREFIX      # [unix]
-    - copy conda_build_config.yaml %PREFIX%   # [win]
+
 
 requirements:
   build:
