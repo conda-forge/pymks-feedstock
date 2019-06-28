@@ -12,8 +12,10 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  number: 1
+  script:
+    - python setup.py install --single-version-externally-managed --record record.txt
+
 
 requirements:
   build:
@@ -23,14 +25,17 @@ requirements:
   run:
     - python
     - numpy
-    - scipy
-    - scikit-learn
-    - pytest
+    - scipy <=0.19.1
+    - scikit-learn <=0.19
+    - pytest <=3.6
     - pytest-cov
     - nbval
-    - sfepy
-    - configparser  # [py27]
-
+    - sfepy <=2017.2
+    - matplotlib <=2.0.2
+    - dask
+    - dask-ml
+    - toolz
+    # - configparser  # [py27]
 
 about:
   home: https://github.com/materialsinnovation/pymks/
