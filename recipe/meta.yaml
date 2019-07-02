@@ -30,9 +30,9 @@ requirements:
     - pytest 3.6
     - pytest-cov
     - nbval
-    - sfepy 2017.2
+    # - sfepy 2017.2
     - matplotlib 2.0.2
-    - mpi4py
+    # - mpi4py
     # - dask
     # - dask-ml
     # - toolz
