@@ -32,6 +32,7 @@ requirements:
     - nbval
     - sfepy 2017.2
     - matplotlib 2.0.2
+    - mpi4py
     # - dask
     # - dask-ml
     # - toolz
