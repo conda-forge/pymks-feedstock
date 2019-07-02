@@ -32,9 +32,9 @@ requirements:
     - nbval
     - sfepy 2017.2
     - matplotlib 2.0.2
-    - dask
-    - dask-ml
-    - toolz
+    # - dask
+    # - dask-ml
+    # - toolz
     # - configparser  # [py27]
 
 about:
