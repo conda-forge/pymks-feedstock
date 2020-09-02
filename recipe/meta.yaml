@@ -1,6 +1,5 @@
 {% set name = "pymks" %}
 {% set version = "0.4" %}
-{% set sha256 = "026bf6d8bdd02faad3a1cb0118bfb03389861051edb389195f047bbc5611405b" %}
 
 package:
   name: {{ name }}
@@ -9,52 +8,51 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: 026bf6d8bdd02faad3a1cb0118bfb03389861051edb389195f047bbc5611405b
 
 build:
   number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
-  build:
+  host:
     - python
-    - setuptools
-
+    - pip
   run:
     - python
-    - numpy
-    - scipy
-    - scikit-learn
     - pytest
+    - numpy
+    - dask
+    - Deprecated
+    - matplotlib
+    - scikit-learn
     - pytest-cov
     - nbval
-    - sfepy
-    - configparser  # [py27]
+    - toolz
 
+test:
+  imports:
+    - pymks
 
 about:
   home: https://github.com/materialsinnovation/pymks/
   license: MIT
-  license_file: 
-    - LICENSE 
-    - LICENSE.md 
-
+  license_file:
+    - LICENSE
+    - LICENSE.md
   license_family: MIT
   summary: The Materials Knowledge System in Python
   description: |
-    The Materials Knowledge Systems (MKS) is a novel data science
-    approach for solving multiscale materials science problems. It
-    uses techniques from physics, machine learning, regression
-    analysis, signal processing, and spatial statistics to create
-    processing-structure-property relationships. The MKS carries the
-    potential to bridge multiple length scales using localization and
-    homogenization linkages, and provides a data driven framework for
-    solving inverse material design problems. The Materials Knowledge
-    Materials in Python (PyMKS) framework is an object-oriented set of
-    tools and examples, written in Python, that provide high-level
-    access to the MKS framework for rapid creation and analysis of
-    structure-property-processing relationships.
-  doc_url: http://pymks.org/en/latest/rst/README.html
+    PyMKS is an open source, pythonic implementation of the
+    methodologies developed under the aegis of Materials Knowledge
+    System (MKS) to build salient process-structure-property linkages
+    for materials science applications.  PyMKS provides for efficient
+    tools for obtaining a digital, uniform grid representation of a
+    materials internal structure in terms of its local states, and
+    computing hierarchical descriptors of the structure that can be
+    used to build efficient machine learning based mappings to the
+    relevant response space.
+  doc_url: http://pymks.org
   dev_url: https://github.com/materialsinnovation/pymks/
 
 extra:
