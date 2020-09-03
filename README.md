@@ -9,18 +9,15 @@ Feedstock license: BSD-3-Clause
 
 Summary: The Materials Knowledge System in Python
 
-The Materials Knowledge Systems (MKS) is a novel data science
-approach for solving multiscale materials science problems. It
-uses techniques from physics, machine learning, regression
-analysis, signal processing, and spatial statistics to create
-processing-structure-property relationships. The MKS carries the
-potential to bridge multiple length scales using localization and
-homogenization linkages, and provides a data driven framework for
-solving inverse material design problems. The Materials Knowledge
-Materials in Python (PyMKS) framework is an object-oriented set of
-tools and examples, written in Python, that provide high-level
-access to the MKS framework for rapid creation and analysis of
-structure-property-processing relationships.
+PyMKS is an open source, pythonic implementation of the
+methodologies developed under the aegis of Materials Knowledge
+System (MKS) to build salient process-structure-property linkages
+for materials science applications.  PyMKS provides for efficient
+tools for obtaining a digital, uniform grid representation of a
+materials internal structure in terms of its local states, and
+computing hierarchical descriptors of the structure that can be
+used to build efficient machine learning based mappings to the
+relevant response space.
 
 
 Current build status
