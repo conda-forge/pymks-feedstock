@@ -24,7 +24,7 @@ requirements:
     - numpy
     - dask
     - Deprecated
-    - matplotlib
+    - matplotlib-base
     - scikit-learn
     - pytest-cov
     - nbval
