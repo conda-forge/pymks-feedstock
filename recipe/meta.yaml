@@ -11,7 +11,7 @@ source:
   sha256: 026bf6d8bdd02faad3a1cb0118bfb03389861051edb389195f047bbc5611405b
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -29,6 +29,7 @@ requirements:
     - pytest-cov
     - nbval
     - toolz
+    - sfepy
 
 test:
   imports:
