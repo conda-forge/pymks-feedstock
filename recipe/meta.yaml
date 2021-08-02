@@ -41,7 +41,6 @@ about:
   home: https://github.com/materialsinnovation/pymks/
   license: MIT
   license_file:
-    - LICENSE
     - LICENSE.md
   license_family: MIT
   summary: The Materials Knowledge System in Python
