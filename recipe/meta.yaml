@@ -1,5 +1,5 @@
 {% set name = "pymks" %}
-{% set version = "0.4" %}
+{% set version = "0.4.1" %}
 
 package:
   name: {{ name }}
@@ -8,10 +8,10 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 026bf6d8bdd02faad3a1cb0118bfb03389861051edb389195f047bbc5611405b
+  sha256: bede562d296279463e4082b46cb3e5c750781838a3e663f881f1c505cddfc403
 
 build:
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -30,8 +30,8 @@ requirements:
     - nbval
     - toolz
     - sfepy
-    - pandas
     - scipy
+    - pandas
 
 test:
   imports:
@@ -41,7 +41,7 @@ about:
   home: https://github.com/materialsinnovation/pymks/
   license: MIT
   license_file:
-    - LICENSE
+    - LICENSE.md
   license_family: MIT
   summary: The Materials Knowledge System in Python
   description: |
