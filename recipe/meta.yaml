@@ -30,6 +30,8 @@ requirements:
     - nbval
     - toolz
     - sfepy
+    - pandas
+    - scipy
 
 test:
   imports:
